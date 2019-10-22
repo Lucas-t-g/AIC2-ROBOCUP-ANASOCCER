@@ -274,6 +274,31 @@ class Agent:
         else:
             goal_pos = (55, 0)
 
+        if self.wm.uniform_number == 1:
+        	player1()
+        elif self.wm.uniform_number == 2:
+            player2()
+        elif self.wm.uniform_number == 3:
+            player3()
+        elif self.wm.uniform_number == 4:
+        	player4()
+        elif self.wm.uniform_number == 5:
+        	player5()
+        elif self.wm.uniform_number == 6:
+            player6()
+        elif self.wm.uniform_number == 7:
+            player7()
+        elif self.wm.uniform_number == 8:
+        	player8()
+        elif self.wm.uniform_number == 9:
+        	player9()
+        elif self.wm.uniform_number == 10:
+            player10()
+        elif self.wm.uniform_number == 11:
+            player11()
+
+       	
+       	"""
         # kick off!
         if self.wm.is_before_kick_off():
             # player 9 takes the kick off
@@ -317,6 +342,7 @@ class Agent:
                     self.wm.ah.turn(self.wm.ball.direction / 2)
 
                 return
+		"""
 
 
 if __name__ == "__main__":
