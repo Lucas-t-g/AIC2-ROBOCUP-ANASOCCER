@@ -301,7 +301,7 @@ class Agent:
             player11()
 
        	
-       	"""
+"""
         # kick off!
         if self.wm.is_before_kick_off():
             # player 9 takes the kick off
@@ -345,7 +345,7 @@ class Agent:
                     self.wm.ah.turn(self.wm.ball.direction / 2)
 
                 return
-'''
+"""
 
 if __name__ == "__main__":
     import sys
