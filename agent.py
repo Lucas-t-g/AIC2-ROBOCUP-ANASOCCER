@@ -221,6 +221,8 @@ class Agent:
 
         self.in_kick_off_formation = False
 
+    #testando
+
     def think(self):
         """
         Performs a single step of thinking for our agent.  Gets called on every
@@ -273,7 +275,7 @@ class Agent:
             goal_pos = (-55, 0)
         else:
             goal_pos = (55, 0)
-
+'''
         # kick off!
         if self.wm.is_before_kick_off():
             # player 9 takes the kick off
@@ -317,7 +319,7 @@ class Agent:
                     self.wm.ah.turn(self.wm.ball.direction / 2)
 
                 return
-
+'''
 
 if __name__ == "__main__":
     import sys
