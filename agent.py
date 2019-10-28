@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+#Consegui ass: Augusto
 
 import threading
 import time
