@@ -222,7 +222,80 @@ class Agent:
 
         self.in_kick_off_formation = False
 
-    #testando
+    def player1(self):
+        self.player10()
+    	#play
+        xxxx = 0
+    def player2(self):
+        self.player10()
+    	#play
+    	xxxx = 0
+    def player3(self):
+        self.player10()
+    	#play
+    	xxxx = 0
+    def player4(self):
+        self.player10()
+    	#play
+    	xxxx = 0
+    def player5(self):
+        self.player10()
+    	#play
+    	xxxx = 0
+    def player6(self):
+        self.player10()
+    	#play
+    	xxxx = 0
+    def player7(self):
+        self.player10()
+    	#play
+    	xxxx = 0
+    def player8(self):
+        self.player10()
+    	#play
+    	xxxx = 0
+    def player9(self):
+    	#play atacante
+        self.player10()
+        if False:
+            time.sleep(0.1)
+
+            #determinando o gol inimigo
+            enemy_goal_pos = None
+            enemy_goal_pos = (55, 0) if self.wm.side != WorldModel.SIDE_R  else (-55, 0)
+            # attack!
+            # find the ball
+            if self.wm.ball is None or self.wm.ball.direction is None:
+                self.wm.ah.turn(30)
+
+                return
+
+            # kick it at the enemy goal
+            if self.wm.is_ball_kickable():
+                self.wm.kick_to((55,0), 1.0)
+                return
+            else:
+                # move towards ball
+                if -7 <= self.wm.ball.direction <= 7:
+                    self.wm.ah.dash(65)
+                else:
+                    # face ball
+                    self.wm.ah.turn(self.wm.ball.direction / 2)
+
+                return
+
+    def player10(self):
+        if True:
+            print(self.cont)
+            if self.cont % 10 > 0:
+                self.wm.ah.dash(65)
+            else:
+                self.wm.ah.turn(90)
+            self.cont += 1
+            time.sleep(0.1)
+
+    def player11(self):
+    	self.player10()
 
     def think(self):
         """
@@ -244,61 +317,57 @@ class Agent:
             #    side_mod = -1
 
             if self.wm.uniform_number == 1:
-                self.wm.teleport_to_point((-50, 00))
+                self.wm.teleport_to_point((-45 * side_mod, 0))
             elif self.wm.uniform_number == 2:
-                self.wm.teleport_to_point((-25, -28))
+                self.wm.teleport_to_point((-40 * side_mod, 15))
             elif self.wm.uniform_number == 3:
-                self.wm.teleport_to_point((-25, 28))
+                self.wm.teleport_to_point((-40 * side_mod, 00))
             elif self.wm.uniform_number == 4:
-                self.wm.teleport_to_point((-35, -8))
+                self.wm.teleport_to_point((-40 * side_mod, -15))
             elif self.wm.uniform_number == 5:
-                self.wm.teleport_to_point((-35, 8))
+                self.wm.teleport_to_point((-15 * side_mod, -25))
             elif self.wm.uniform_number == 6:
-                self.wm.teleport_to_point((-20, 0))
+                self.wm.teleport_to_point((-15 * side_mod, 25))
             elif self.wm.uniform_number == 7:
-                self.wm.teleport_to_point((-20, -15))
+                self.wm.teleport_to_point((-20 * side_mod, 12))
             elif self.wm.uniform_number == 8:
-                self.wm.teleport_to_point((-20, 15))
+                self.wm.teleport_to_point((-20 * side_mod, -12))
             elif self.wm.uniform_number == 9:
-                self.wm.teleport_to_point((-12, 0))
+                self.wm.teleport_to_point((-18 * side_mod, 0))
             elif self.wm.uniform_number == 10:
-                self.wm.teleport_to_point((0, 20))
+                self.wm.teleport_to_point((-18 * side_mod, 10))
             elif self.wm.uniform_number == 11:
-                self.wm.teleport_to_point((0, -20))
+                self.wm.teleport_to_point((-18 * side_mod, -10))
 
             self.in_kick_off_formation = True
 
             return
 
         # determine the enemy goal position
-        goal_pos = None
-        if self.wm.side == WorldModel.SIDE_R:
-            goal_pos = (-55, 0)
-        else:
-            goal_pos = (55, 0)
 
+        
         if self.wm.uniform_number == 1:
-        	player1()
+        	self.player1()
         elif self.wm.uniform_number == 2:
-            player2()
+            self.player2()
         elif self.wm.uniform_number == 3:
-            player3()
+            self.player3()
         elif self.wm.uniform_number == 4:
-        	player4()
+        	self.player4()
         elif self.wm.uniform_number == 5:
-        	player5()
+        	self.player5()
         elif self.wm.uniform_number == 6:
-            player6()
+            self.player6()
         elif self.wm.uniform_number == 7:
-            player7()
+            self.player7()
         elif self.wm.uniform_number == 8:
-        	player8()
+        	self.player8()
         elif self.wm.uniform_number == 9:
-        	player9()
+        	self.player9()
         elif self.wm.uniform_number == 10:
-            player10()
+            self.player10()
         elif self.wm.uniform_number == 11:
-            player11()
+            self.player11()
 
        	
 """
